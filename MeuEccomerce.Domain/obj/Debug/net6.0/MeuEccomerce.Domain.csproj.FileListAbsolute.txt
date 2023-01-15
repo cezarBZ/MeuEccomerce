@@ -1,0 +1,12 @@
+C:\dev\local\MeuEccomerce\MeuEccomerce.Domain\bin\Debug\net6.0\MeuEccomerce.Domain.deps.json
+C:\dev\local\MeuEccomerce\MeuEccomerce.Domain\bin\Debug\net6.0\MeuEccomerce.Domain.dll
+C:\dev\local\MeuEccomerce\MeuEccomerce.Domain\bin\Debug\net6.0\MeuEccomerce.Domain.pdb
+C:\dev\local\MeuEccomerce\MeuEccomerce.Domain\obj\Debug\net6.0\MeuEccomerce.Domain.csproj.AssemblyReference.cache
+C:\dev\local\MeuEccomerce\MeuEccomerce.Domain\obj\Debug\net6.0\MeuEccomerce.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\local\MeuEccomerce\MeuEccomerce.Domain\obj\Debug\net6.0\MeuEccomerce.Domain.AssemblyInfoInputs.cache
+C:\dev\local\MeuEccomerce\MeuEccomerce.Domain\obj\Debug\net6.0\MeuEccomerce.Domain.AssemblyInfo.cs
+C:\dev\local\MeuEccomerce\MeuEccomerce.Domain\obj\Debug\net6.0\MeuEccomerce.Domain.csproj.CoreCompileInputs.cache
+C:\dev\local\MeuEccomerce\MeuEccomerce.Domain\obj\Debug\net6.0\MeuEccomerce.Domain.dll
+C:\dev\local\MeuEccomerce\MeuEccomerce.Domain\obj\Debug\net6.0\refint\MeuEccomerce.Domain.dll
+C:\dev\local\MeuEccomerce\MeuEccomerce.Domain\obj\Debug\net6.0\MeuEccomerce.Domain.pdb
+C:\dev\local\MeuEccomerce\MeuEccomerce.Domain\obj\Debug\net6.0\ref\MeuEccomerce.Domain.dll

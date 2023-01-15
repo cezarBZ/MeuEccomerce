@@ -1,0 +1,17 @@
+C:\dev\local\MeuEccomerce\MeuEccomerce.Infrastructure\bin\Debug\net6.0\MeuEccomerce.Infrastructure.deps.json
+C:\dev\local\MeuEccomerce\MeuEccomerce.Infrastructure\bin\Debug\net6.0\MeuEccomerce.Infrastructure.runtimeconfig.json
+C:\dev\local\MeuEccomerce\MeuEccomerce.Infrastructure\bin\Debug\net6.0\MeuEccomerce.Infrastructure.dll
+C:\dev\local\MeuEccomerce\MeuEccomerce.Infrastructure\bin\Debug\net6.0\MeuEccomerce.Infrastructure.pdb
+C:\dev\local\MeuEccomerce\MeuEccomerce.Infrastructure\bin\Debug\net6.0\MeuEccomerce.Domain.dll
+C:\dev\local\MeuEccomerce\MeuEccomerce.Infrastructure\bin\Debug\net6.0\MeuEccomerce.Domain.pdb
+C:\dev\local\MeuEccomerce\MeuEccomerce.Infrastructure\obj\Debug\net6.0\MeuEccomerce.Infrastructure.csproj.AssemblyReference.cache
+C:\dev\local\MeuEccomerce\MeuEccomerce.Infrastructure\obj\Debug\net6.0\MeuEccomerce.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\local\MeuEccomerce\MeuEccomerce.Infrastructure\obj\Debug\net6.0\MeuEccomerce.Infrastructure.AssemblyInfoInputs.cache
+C:\dev\local\MeuEccomerce\MeuEccomerce.Infrastructure\obj\Debug\net6.0\MeuEccomerce.Infrastructure.AssemblyInfo.cs
+C:\dev\local\MeuEccomerce\MeuEccomerce.Infrastructure\obj\Debug\net6.0\MeuEccomerce.Infrastructure.csproj.CoreCompileInputs.cache
+C:\dev\local\MeuEccomerce\MeuEccomerce.Infrastructure\obj\Debug\net6.0\MeuEccomerce.Infrastructure.csproj.CopyComplete
+C:\dev\local\MeuEccomerce\MeuEccomerce.Infrastructure\obj\Debug\net6.0\MeuEccomerce.Infrastructure.dll
+C:\dev\local\MeuEccomerce\MeuEccomerce.Infrastructure\obj\Debug\net6.0\refint\MeuEccomerce.Infrastructure.dll
+C:\dev\local\MeuEccomerce\MeuEccomerce.Infrastructure\obj\Debug\net6.0\MeuEccomerce.Infrastructure.pdb
+C:\dev\local\MeuEccomerce\MeuEccomerce.Infrastructure\obj\Debug\net6.0\MeuEccomerce.Infrastructure.genruntimeconfig.cache
+C:\dev\local\MeuEccomerce\MeuEccomerce.Infrastructure\obj\Debug\net6.0\ref\MeuEccomerce.Infrastructure.dll
