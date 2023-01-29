@@ -81,3 +81,5 @@ C:\dev\local\MeuEccomerce\MeuEccomerce\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc
 C:\dev\local\MeuEccomerce\MeuEccomerce\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\dev\local\MeuEccomerce\MeuEccomerce\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
 C:\dev\local\MeuEccomerce\MeuEccomerce\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
+C:\dev\local\MeuEccomerce\MeuEccomerce\bin\Debug\net6.0\FluentValidation.dll
+C:\dev\local\MeuEccomerce\MeuEccomerce\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll

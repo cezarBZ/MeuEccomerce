@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "MeuEccomerce.Domain": {
+      "commandName": "Project",
+      "workingDirectory": "C:\\dev\\local\\MeuEccomerce"
+    }
+  }
+}

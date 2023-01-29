@@ -1,13 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "M2Wzaj7lyHpD2y8qt7utz62FCi33xImmR6G5Zh54+FHmXsYXHNtkDaxY7XkMOvAlbFJutoDCFxPkKgfKji3W9A==",
+  "dgSpecHash": "ws7wFpgfVJlxsOfF8XqOgw2vUqfEZq2g4r+I5jBPbWMin6ju/nTKvQ3lLvTfTmbE9h9cbtif7ipsht5vX6IebA==",
   "success": true,
   "projectFilePath": "C:\\dev\\local\\MeuEccomerce\\MeuEccomerce.Infrastructure\\MeuEccomerce.Infrastructure.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\cezar.bezerra\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\cezar.bezerra\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\cezar.bezerra\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
     "C:\\Users\\cezar.bezerra\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
-    "C:\\Users\\cezar.bezerra\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\cezar.bezerra\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\cezar.bezerra\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\cezar.bezerra\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "C:\\Users\\cezar.bezerra\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.9\\microsoft.entityframeworkcore.6.0.9.nupkg.sha512",

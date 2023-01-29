@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\MeuEccomerce",
+    "\\MeuEccomerce\\bin",
+    "\\MeuEccomerce\\Infrastructure",
+    "\\MeuEccomerce\\Infrastructure\\AutoFacModules"
+  ],
+  "SelectedNode": "\\MeuEccomerce\\Infrastructure\\AutoFacModules\\MediatorModule.cs",
+  "PreviewInSolutionExplorer": false
+}

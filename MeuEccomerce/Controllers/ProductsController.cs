@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using MeuEccomerce.API.Application.Commands.Product;
 using MeuEccomerce.API.Application.Query.Products;
+using MeuEccomerce.API.Validators;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MeuEccomerce.API.Controllers;
@@ -10,10 +11,11 @@ namespace MeuEccomerce.API.Controllers;
 public class ProductsController : ControllerBase
 {
     private readonly IMediator _mediator;
-
-    public ProductsController(IMediator mediator)
+    private readonly ProductValidator _validationRules;
+    public ProductsController(IMediator mediator, ProductValidator validationRules)
     {
         _mediator = mediator;
+        _validationRules = validationRules;
     }
 
     [HttpGet]
@@ -34,10 +36,13 @@ public class ProductsController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> Add([FromBody] AddProductCommand command)
     {
+        var validator = _validationRules.Validate(command);
+
+        if (!validator.IsValid)
+            return BadRequest(validator.Errors);
+
         var cmd = await _mediator.Send(command);
 
-        if (!cmd)
-            return BadRequest();
         return Ok("Deu bom");
     }
 

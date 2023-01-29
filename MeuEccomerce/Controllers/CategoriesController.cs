@@ -1,9 +1,11 @@
 ﻿using AutoMapper;
+using FluentValidation;
 using MediatR;
 using MeuEccomerce.API.Application.Commands.Category;
 using MeuEccomerce.API.Application.Models.DTO_s;
 using MeuEccomerce.API.Application.Query;
 using MeuEccomerce.API.Application.Query.Categories;
+using MeuEccomerce.API.Validators;
 using MeuEccomerce.Domain.AggregatesModel.CategoryAggregate;
 using MeuEccomerce.Domain.Core.Data;
 using Microsoft.AspNetCore.Mvc;
@@ -18,10 +20,12 @@ namespace MeuEccomerce.API.Controllers;
 public class CategoriesController : ControllerBase
 {
     private readonly IMediator _mediator;
+    private readonly CategoryValidator _validationRules;
 
-    public CategoriesController(IMediator mediator)
+    public CategoriesController(IMediator mediator, CategoryValidator validationRules)
     {
         _mediator = mediator;
+        _validationRules = validationRules;
     }
     [HttpGet]
     [Route("{Id:int}")]
@@ -40,10 +44,12 @@ public class CategoriesController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> Add([FromBody] CreateCategoryCommand command)
     {
-        var cmd = await _mediator.Send(command);
+        var validator = _validationRules.Validate(command);
 
-        if (!cmd)
-            return BadRequest();
+        if (!validator.IsValid)
+            return BadRequest(validator.Errors);
+
+        var cmd = await _mediator.Send(command);
         return Ok("Deu bom");
     }
 
