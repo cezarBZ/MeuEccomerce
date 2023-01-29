@@ -2,12 +2,12 @@
 
 namespace MeuEccomerce.Domain.Core.Data;
 
-public interface IRepository<TEntity, TKey> : IDisposable where TEntity : class
+public interface IRepository<T, TKey> : IDisposable where T : class
 {
-    IQueryable<TEntity> GetAll();
-    TEntity GetById(TKey id);
-    void Add(TEntity obj);
-    void Update(TEntity obj);
-    void Delete(TEntity entity);
+    IQueryable<T> GetAll();
+    T GetById(TKey id);
+    void Add(T obj);
+    void Update(T obj);
+    void Delete(T entity);
     IUnitOfWork UnitOfWork { get; }
 }

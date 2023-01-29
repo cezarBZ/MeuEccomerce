@@ -3,9 +3,7 @@ using MeuEccomerce.Domain.AggregatesModel.ProductAggregate;
 
 namespace MeuEccomerce.Domain.Core.Data;
 
-public interface IUnitOfWork
+public interface IUnitOfWork : IDisposable
 {
-    IProductRepository productRepository { get; }
-    ICategoryRepository categoryRepository { get; }
-    public Task SaveChangesAsync(CancellationToken cancellationToken = default(CancellationToken));
+    Task<int> SaveChangesAsync(CancellationToken cancellationToken = default(CancellationToken));
 }
