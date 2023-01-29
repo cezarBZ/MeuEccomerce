@@ -33,6 +33,10 @@ public class ProductConfiguration : IEntityTypeConfiguration<Product>
         builder.Property(p => p.RegisterDate)
             .IsRequired();
 
+        builder.Property(e => e.CategoryName)
+            .IsRequired()
+            .HasMaxLength(100);
+
         builder.HasOne<Category>()
            .WithMany()
            .IsRequired()

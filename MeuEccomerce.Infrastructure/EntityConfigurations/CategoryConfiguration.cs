@@ -25,5 +25,9 @@ public class CategoryConfiguration : IEntityTypeConfiguration<Category>
 
         builder.Property(e => e.ImageUrl)
             .HasMaxLength(400);
+
+        builder.Property(e => e.IsEnabled)
+            .IsRequired()
+            .HasColumnType("bit"); 
     }
 }
