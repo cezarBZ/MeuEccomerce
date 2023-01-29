@@ -17,10 +17,10 @@ public class DeleteProductCommandHandler : IRequestHandler<DeleteProductCommand,
     {
         if (request == null) throw new ArgumentNullException(nameof(request));
 
-        var product = _productRepository.GetById(request.ProductId);
+        var product = _productRepository.GetById(request.ProductId) ?? throw new ArgumentNullException("Product not found");
 
         _productRepository.Delete(product);
-        await _productRepository.UnitOfWork.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
+        await  _productRepository.UnitOfWork.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
         return true;
     }
 }

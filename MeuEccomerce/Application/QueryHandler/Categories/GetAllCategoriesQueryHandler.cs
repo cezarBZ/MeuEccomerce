@@ -17,7 +17,7 @@ public class GetAllCategoriesQueryHandler : IRequestHandler<GetAllCategoriesQuer
 
     public async Task<IEnumerable<Category>> Handle(GetAllCategoriesQuery request, CancellationToken cancellationToken)
     {
-        var categories = _categoryRepository.GetAll();
+        var categories = await _categoryRepository.GetAllAsync();
         return categories;
     }
 }

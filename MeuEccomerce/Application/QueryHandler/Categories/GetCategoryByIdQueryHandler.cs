@@ -13,10 +13,11 @@ namespace MeuEccomerce.API.Application.QueryHandler.Categories
             _categoryRepository = categoryRepository;
         }
 
-        public Task<Category> Handle(GetCategoryByIdQuery request, CancellationToken cancellationToken)
+        public async Task<Category> Handle(GetCategoryByIdQuery request, CancellationToken cancellationToken)
         {
-            var category = _categoryRepository.GetById(request.categoryId);
-            return Task.FromResult(category);
+            var category = await _categoryRepository.GetByIdAsync(request.categoryId) ?? throw new ArgumentNullException("Category not found");
+
+            return category;
         }
     }
 }

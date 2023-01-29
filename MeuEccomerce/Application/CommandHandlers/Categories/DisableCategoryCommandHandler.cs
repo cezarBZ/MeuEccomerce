@@ -17,9 +17,7 @@ namespace MeuEccomerce.API.Application.CommandHandlers.Categories
         {
             if (request == null) throw new ArgumentNullException(nameof(request));
 
-            Category category = _categoryRepository.GetById(request.CategoryId);
-
-            if (category == null) throw new ArgumentNullException(nameof(category));
+            Category category = await _categoryRepository.GetByIdAsync(request.CategoryId) ?? throw new ArgumentNullException("Category not found"); 
 
             category.Disable();
 

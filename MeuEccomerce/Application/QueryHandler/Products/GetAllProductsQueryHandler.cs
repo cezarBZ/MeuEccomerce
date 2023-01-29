@@ -4,7 +4,7 @@ using MeuEccomerce.Domain.AggregatesModel.ProductAggregate;
 
 namespace MeuEccomerce.API.Application.QueryHandler.Products;
 
-public class GetAllProductsQueryHandler : IRequestHandler<GetAllProductsQuery, IEnumerable<Product>>
+public class GetAllProductsQueryHandler : IRequestHandler<GetAllProductsQuery, IReadOnlyList<Product>>
 {
     private readonly IProductRepository _productRepository;
 
@@ -14,9 +14,9 @@ public class GetAllProductsQueryHandler : IRequestHandler<GetAllProductsQuery, I
     }
 
 
-    public async Task<IEnumerable<Product>> Handle(GetAllProductsQuery request, CancellationToken cancellationToken)
+    public async Task<IReadOnlyList<Product>> Handle(GetAllProductsQuery request, CancellationToken cancellationToken)
     {
-        var products = _productRepository.GetAll();
+        var products = await _productRepository.GetAllAsync();
         return products;
     }
 }

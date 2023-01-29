@@ -13,10 +13,10 @@ public class GetProductByIdQueryHandler : IRequestHandler<GetProductByIdQuery, P
         _productRepository = productRepository;
     }
 
-    public Task<Product> Handle(GetProductByIdQuery request, CancellationToken cancellationToken)
+    public async Task<Product> Handle(GetProductByIdQuery request, CancellationToken cancellationToken)
     {
-        var product = _productRepository.GetById(request.productId);
-        return Task.FromResult(product);
+        var product = await _productRepository.GetByIdAsync(request.productId) ?? throw new ArgumentNullException("Product not found");
+        return product;
     }
 
 }
