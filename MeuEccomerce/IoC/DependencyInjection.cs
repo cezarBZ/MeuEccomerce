@@ -1,4 +1,7 @@
-﻿using MeuEccomerce.API.Application.Mappings;
+﻿using Autofac;
+using MediatR;
+using MeuEccomerce.API.Application.Mappings;
+using MeuEccomerce.API.Infrastructure.AutoFacModules;
 using MeuEccomerce.Domain.AggregatesModel.CategoryAggregate;
 using MeuEccomerce.Domain.AggregatesModel.ProductAggregate;
 using MeuEccomerce.Domain.Core.Data;
@@ -7,6 +10,7 @@ using MeuEccomerce.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System.Reflection;
 
 namespace MeuEccomerce.API.IoC;
 
@@ -19,12 +23,12 @@ public static class DependencyInjection
         services.AddDbContext<ApplicationDataContext>(options =>
            options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"
             ), b => b.MigrationsAssembly(typeof(ApplicationDataContext).Assembly.FullName)));
-
-        services.AddScoped<ICategoryRepository, CategoryRepository>();
-        services.AddScoped<IProductRepository, ProductRepository>();
-        services.AddScoped<IUnitOfWork, UnitOfWork>();
-
-        services.AddAutoMapper(typeof(DomainToDTOMappingProfile));
+        
+        var container = new ContainerBuilder();
+        container.RegisterModule(new MediatorModule());
+        services.AddMediatR(Assembly.GetExecutingAssembly());
+        container.RegisterModule(new ApplicationModule("Server=NTB-2KY74W2;Database=MeuEccomerce;Trusted_Connection=True;"));
+        //services.AddAutoMapper(typeof(DomainToDTOMappingProfile));
         return services;
     }
 }

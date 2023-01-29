@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeuEccomerce.API", "MeuEccomerce\MeuEccomerce.API.csproj", "{371C4AC2-2930-45CB-95F1-B57734722597}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeuEccomerce.API", "MeuEccomerce\MeuEccomerce.API.csproj", "{371C4AC2-2930-45CB-95F1-B57734722597}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeuEccomerce.Domain", "MeuEccomerce.Domain\MeuEccomerce.Domain.csproj", "{A9EA95AA-B41E-48B3-B23C-5CCC0AD8F2A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeuEccomerce.Domain", "MeuEccomerce.Domain\MeuEccomerce.Domain.csproj", "{A9EA95AA-B41E-48B3-B23C-5CCC0AD8F2A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeuEccomerce.Infrastructure", "MeuEccomerce.Infrastructure\MeuEccomerce.Infrastructure.csproj", "{5D9EBFE8-A807-47C3-ADAE-11D80504D4F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeuEccomerce.Infrastructure", "MeuEccomerce.Infrastructure\MeuEccomerce.Infrastructure.csproj", "{5D9EBFE8-A807-47C3-ADAE-11D80504D4F2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
