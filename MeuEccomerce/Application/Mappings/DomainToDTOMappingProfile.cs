@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using MeuEccomerce.API.Application.Models.DTO_s;
 using MeuEccomerce.Domain.AggregatesModel.CategoryAggregate;
 using MeuEccomerce.Domain.AggregatesModel.ProductAggregate;
 
@@ -8,7 +9,7 @@ public class DomainToDTOMappingProfile : Profile
 {
     public DomainToDTOMappingProfile()
     {
-        //CreateMap<Category, CategoriaDTO>().ReverseMap();
-        //CreateMap<Product, ProdutoDTO>().ReverseMap();
+        CreateMap<Category, CategoryDTO>().ReverseMap();
+        CreateMap<Product, ProductDTO>().ReverseMap();
     }
 }
