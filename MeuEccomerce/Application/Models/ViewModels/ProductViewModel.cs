@@ -2,13 +2,12 @@
 {
     public class ProductViewModel
     {
-        public ProductViewModel(string name, string categoryName)
-        {
-            Name = name;
-            CategoryName = categoryName;
-        }
-
         public string Name { get; set; }
         public string CategoryName { get; set; }
+        public string Description { get;  set; }
+        public decimal Price { get;  set; }
+        public string ImageUrl { get;  set; }
+        public int Inventory { get;  set; }
+        public int CategoryId { get;  set; }
     }
 }

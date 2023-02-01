@@ -10,23 +10,16 @@ namespace MeuEccomerce.API.Application.CommandHandlers.Products;
 public class AddProductCommandHandler : IRequestHandler<AddProductCommand, bool>
 {        
     private readonly IProductRepository _productRepository;
-    private readonly ICategoryRepository _categoryRepository;
-    private readonly ProductValidator _validationRules;
 
-    public AddProductCommandHandler(IProductRepository productRepository, ICategoryRepository categoryRepository, ProductValidator validationRules)
+    public AddProductCommandHandler(IProductRepository productRepository)
     {
         _productRepository = productRepository;
-        _categoryRepository = categoryRepository;
-        _validationRules = validationRules;
     }
 
     public async Task<bool> Handle(AddProductCommand request, CancellationToken cancellationToken)
     {
-        _validationRules.ValidateAndThrow(request);
         if (request == null) throw new ArgumentNullException(nameof(request)); 
 
-        var categoryName = _categoryRepository.GetById(request.CategoryId).Name ?? throw new ArgumentException(nameof(AddProductCommand.CategoryId));
-        
         Product product = new(
             request.Name,
             request.Description,
@@ -34,8 +27,7 @@ public class AddProductCommandHandler : IRequestHandler<AddProductCommand, bool>
             request.ImageUrl,
             request.Inventory,
             DateTime.Now,
-            request.CategoryId,
-            categoryName
+            request.CategoryId
             );
         _productRepository.Add(product);
         await _productRepository.UnitOfWork.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
