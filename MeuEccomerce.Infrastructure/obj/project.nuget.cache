@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ws7wFpgfVJlxsOfF8XqOgw2vUqfEZq2g4r+I5jBPbWMin6ju/nTKvQ3lLvTfTmbE9h9cbtif7ipsht5vX6IebA==",
+  "dgSpecHash": "hSg1cicMuVQ7xvJ+8RIDacF2nX7cqO5TB+O6NLFAZEDc3GWmIrdTQjOWMLUpAm/ZQh1EqSglG6VGgQdIRcJNdA==",
   "success": true,
   "projectFilePath": "C:\\dev\\local\\MeuEccomerce\\MeuEccomerce.Infrastructure\\MeuEccomerce.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,9 @@
     "C:\\Users\\cezar.bezerra\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\cezar.bezerra\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
     "C:\\Users\\cezar.bezerra\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
+    "C:\\Users\\cezar.bezerra\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.2\\microsoft.aspnetcore.cryptography.internal.6.0.2.nupkg.sha512",
+    "C:\\Users\\cezar.bezerra\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.2\\microsoft.aspnetcore.cryptography.keyderivation.6.0.2.nupkg.sha512",
+    "C:\\Users\\cezar.bezerra\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\6.0.2\\microsoft.aspnetcore.identity.entityframeworkcore.6.0.2.nupkg.sha512",
     "C:\\Users\\cezar.bezerra\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\cezar.bezerra\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\cezar.bezerra\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
@@ -23,6 +26,8 @@
     "C:\\Users\\cezar.bezerra\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\cezar.bezerra\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.0\\microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512",
     "C:\\Users\\cezar.bezerra\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\cezar.bezerra\\.nuget\\packages\\microsoft.extensions.identity.core\\6.0.2\\microsoft.extensions.identity.core.6.0.2.nupkg.sha512",
+    "C:\\Users\\cezar.bezerra\\.nuget\\packages\\microsoft.extensions.identity.stores\\6.0.2\\microsoft.extensions.identity.stores.6.0.2.nupkg.sha512",
     "C:\\Users\\cezar.bezerra\\.nuget\\packages\\microsoft.extensions.logging\\6.0.0\\microsoft.extensions.logging.6.0.0.nupkg.sha512",
     "C:\\Users\\cezar.bezerra\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\cezar.bezerra\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",

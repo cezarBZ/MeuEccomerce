@@ -2,13 +2,14 @@
 using MeuEccomerce.Domain.AggregatesModel.ProductAggregate;
 using MeuEccomerce.Domain.Core.Data;
 using MeuEccomerce.Infrastructure.EntityConfigurations;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using System.Reflection.Emit;
 
 namespace MeuEccomerce.Infrastructure.Data;
 
-public class ApplicationDataContext : DbContext, IUnitOfWork
+public class ApplicationDataContext : IdentityDbContext, IUnitOfWork
 {
     public const string DEFAULT_SCHEMA = "MYE";
     public ApplicationDataContext(DbContextOptions<ApplicationDataContext> options) : base(options)

@@ -5,17 +5,21 @@ using MeuEccomerce.API.Application.Commands.Category;
 using MeuEccomerce.API.Application.Commands.Product;
 using MeuEccomerce.API.Application.Mappings;
 using MeuEccomerce.API.Infrastructure.AutoFacModules;
+using MeuEccomerce.API.Security;
 using MeuEccomerce.API.Validators;
 using MeuEccomerce.Domain.AggregatesModel.CategoryAggregate;
 using MeuEccomerce.Domain.AggregatesModel.ProductAggregate;
 using MeuEccomerce.Domain.Core.Data;
 using MeuEccomerce.Infrastructure.Data;
 using MeuEccomerce.Infrastructure.Repositories;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.IdentityModel.Tokens;
 using System.Reflection;
+using System.Text;
 
 namespace MeuEccomerce.API.IoC;
 
@@ -39,6 +43,22 @@ public static class DependencyInjection
         services.AddTransient<ProductValidator>();
         services.AddAutoMapper(typeof(AutoMapperProfile));
         services.AddScoped<IValidator<AddProductCommand>, ProductValidator>();
+        services.AddIdentity<IdentityUser, IdentityRole>()
+            .AddEntityFrameworkStores<ApplicationDataContext>()
+            .AddDefaultTokenProviders();
+        services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+            .AddJwtBearer(options => {
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    ValidIssuer = configuration["TokenConfiguration:Issuer"],
+                    ValidAudience = configuration["TokenConfiguration:Audience"],
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Jwt:Key"]))
+                };
+            });
 
         return services;
     }

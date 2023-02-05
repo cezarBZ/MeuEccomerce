@@ -8,6 +8,7 @@ using MeuEccomerce.API.Application.Query.Categories;
 using MeuEccomerce.API.Validators;
 using MeuEccomerce.Domain.AggregatesModel.CategoryAggregate;
 using MeuEccomerce.Domain.Core.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -15,6 +16,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MeuEccomerce.API.Controllers;
 
+[Authorize(AuthenticationSchemes = "Bearer")]
 [Route("api/[controller]")]
 [ApiController]
 public class CategoriesController : ControllerBase
@@ -50,7 +52,7 @@ public class CategoriesController : ControllerBase
             return BadRequest(validator.Errors);
 
         var cmd = await _mediator.Send(command);
-        return Ok("Deu bom");
+        return Ok(command);
     }
 
     [HttpPatch]
@@ -63,7 +65,7 @@ public class CategoriesController : ControllerBase
 
         if (!cmd)
             return BadRequest();
-        return Ok("Deu bom");
+        return Ok("Categoria desabilitada");
     }
 
     [HttpPatch]
@@ -76,7 +78,7 @@ public class CategoriesController : ControllerBase
 
         if (!cmd)
             return BadRequest();
-        return Ok("Deu bom");
+        return Ok("Categoria habilitada");
     }
 
 }
