@@ -5,7 +5,6 @@ using MeuEccomerce.Infrastructure.EntityConfigurations;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
-using System.Reflection.Emit;
 
 namespace MeuEccomerce.Infrastructure.Data;
 

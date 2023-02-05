@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using MeuEccomerce.Domain.AggregatesModel.ProductAggregate;
+﻿using MeuEccomerce.Domain.AggregatesModel.ProductAggregate;
 using MeuEccomerce.Infrastructure.Data;
 
 namespace MeuEccomerce.Infrastructure.Repositories;

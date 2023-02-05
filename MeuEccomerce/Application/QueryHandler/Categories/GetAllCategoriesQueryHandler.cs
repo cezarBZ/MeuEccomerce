@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using MediatR;
+﻿using MediatR;
 using MeuEccomerce.API.Application.Query.Categories;
 using MeuEccomerce.Domain.AggregatesModel.CategoryAggregate;
 

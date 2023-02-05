@@ -1,7 +1,4 @@
-﻿using MeuEccomerce.Domain.AggregatesModel.CategoryAggregate;
-using MeuEccomerce.Domain.AggregatesModel.ProductAggregate;
-
-namespace MeuEccomerce.Domain.Core.Data;
+﻿namespace MeuEccomerce.Domain.Core.Data;
 
 public interface IUnitOfWork : IDisposable
 {

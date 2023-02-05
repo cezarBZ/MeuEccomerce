@@ -1,7 +1,6 @@
 ﻿using FluentValidation;
 using MeuEccomerce.API.Application.Commands.Product;
 using MeuEccomerce.Domain.AggregatesModel.CategoryAggregate;
-using MeuEccomerce.Domain.AggregatesModel.ProductAggregate;
 
 namespace MeuEccomerce.API.Validators
 {

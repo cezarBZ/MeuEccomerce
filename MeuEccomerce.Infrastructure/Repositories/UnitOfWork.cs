@@ -1,9 +1,5 @@
-﻿using MeuEccomerce.Domain.AggregatesModel.CategoryAggregate;
-using MeuEccomerce.Domain.AggregatesModel.ProductAggregate;
-using MeuEccomerce.Domain.Core.Data;
+﻿using MeuEccomerce.Domain.Core.Data;
 using MeuEccomerce.Infrastructure.Data;
-using Microsoft.EntityFrameworkCore;
-using System;
 
 namespace MeuEccomerce.Infrastructure.Repositories;
 

@@ -1,5 +1,4 @@
-﻿using MeuEccomerce.Domain.Core.Models;
-using System.Linq.Expressions;
+﻿using System.Linq.Expressions;
 
 namespace MeuEccomerce.Domain.Core.Data;
 

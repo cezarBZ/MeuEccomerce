@@ -1,8 +1,5 @@
-﻿using FluentValidation;
-using MediatR;
+﻿using MediatR;
 using MeuEccomerce.API.Application.Commands.Product;
-using MeuEccomerce.API.Validators;
-using MeuEccomerce.Domain.AggregatesModel.CategoryAggregate;
 using MeuEccomerce.Domain.AggregatesModel.ProductAggregate;
 
 namespace MeuEccomerce.API.Application.CommandHandlers.Products;

@@ -1,5 +1,4 @@
-﻿using MeuEccomerce.Domain.AggregatesModel.ProductAggregate;
-using MeuEccomerce.Domain.Core.Models;
+﻿using MeuEccomerce.Domain.Core.Models;
 
 namespace MeuEccomerce.Domain.AggregatesModel.CategoryAggregate;
 

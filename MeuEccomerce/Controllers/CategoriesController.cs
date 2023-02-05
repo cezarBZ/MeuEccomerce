@@ -1,17 +1,9 @@
-﻿using AutoMapper;
-using FluentValidation;
-using MediatR;
+﻿using MediatR;
 using MeuEccomerce.API.Application.Commands.Category;
-using MeuEccomerce.API.Application.Models.DTO_s;
-using MeuEccomerce.API.Application.Query;
 using MeuEccomerce.API.Application.Query.Categories;
 using MeuEccomerce.API.Validators;
-using MeuEccomerce.Domain.AggregatesModel.CategoryAggregate;
-using MeuEccomerce.Domain.Core.Data;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace MeuEccomerce.API.Controllers;

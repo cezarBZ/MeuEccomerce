@@ -1,7 +1,4 @@
 ﻿using Autofac;
-using MeuEccomerce.API.Application.Commands.Category;
-using MeuEccomerce.Domain.AggregatesModel.CategoryAggregate;
-using MeuEccomerce.Domain.AggregatesModel.ProductAggregate;
 using MeuEccomerce.Domain.Core.Data;
 using MeuEccomerce.Infrastructure.Repositories;
 

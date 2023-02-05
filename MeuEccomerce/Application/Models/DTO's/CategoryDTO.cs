@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace MeuEccomerce.API.Application.Models.DTO_s
+﻿namespace MeuEccomerce.API.Application.Models.DTO_s
 {
     public class CategoryDTO
     {
