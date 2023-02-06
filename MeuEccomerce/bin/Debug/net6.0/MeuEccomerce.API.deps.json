@@ -854,9 +854,6 @@
         }
       },
       "MeuEccomerce.Domain/1.0.0": {
-        "dependencies": {
-          "MediatR": "11.1.0"
-        },
         "runtime": {
           "MeuEccomerce.Domain.dll": {}
         }

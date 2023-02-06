@@ -1,6 +1,7 @@
 ﻿using MediatR;
-using MeuEccomerce.Domain.AggregatesModel.CategoryAggregate;
+using MeuEccomerce.API.Application.Models.DTO_s;
+using MeuEccomerce.API.Application.Models.ViewModels;
 
 namespace MeuEccomerce.API.Application.Query.Categories;
 
-public record GetAllCategoriesQuery() : IRequest<IEnumerable<Category>>;
+public class GetAllCategoriesQuery : IRequest<IReadOnlyList<CategoryDTO>> { };

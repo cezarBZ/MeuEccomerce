@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace MeuEccomerce.API.Controllers;
 
-[Authorize]
+//[Authorize]
 [Route("api/[controller]")]
 [ApiController]
 public class ProductsController : ControllerBase

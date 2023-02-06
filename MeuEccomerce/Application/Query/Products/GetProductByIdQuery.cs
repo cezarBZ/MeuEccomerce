@@ -1,8 +1,15 @@
 ﻿using MediatR;
-using MeuEccomerce.Domain.AggregatesModel.ProductAggregate;
+using MeuEccomerce.API.Application.Models.DTO_s;
 
 namespace MeuEccomerce.API.Application.Query.Products
 {
-    public record GetProductByIdQuery(Guid productId) : IRequest<Product>;
+    public class GetProductByIdQuery : IRequest<ProductDTO>
+    {
+        public GetProductByIdQuery(Guid id)
+        {
+            Id = id;
+        }
+        public Guid Id { get; set; }
 
+    }
 }

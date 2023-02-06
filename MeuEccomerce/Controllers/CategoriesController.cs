@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace MeuEccomerce.API.Controllers;
 
-[Authorize(AuthenticationSchemes = "Bearer")]
+//[Authorize]
 [Route("api/[controller]")]
 [ApiController]
 public class CategoriesController : ControllerBase

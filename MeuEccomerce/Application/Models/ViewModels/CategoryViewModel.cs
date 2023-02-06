@@ -1,8 +1,7 @@
-﻿namespace MeuEccomerce.API.Application.Models.DTO_s
+﻿namespace MeuEccomerce.API.Application.Models.ViewModels
 {
-    public class CategoryDTO
+    public class CategoryViewModel
     {
-        public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public string ImageUrl { get; set; }
