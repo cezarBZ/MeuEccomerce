@@ -21,22 +21,22 @@ public class GetAllProductsQueryHandler : IRequestHandler<GetAllProductsQuery, I
     public async Task<IReadOnlyList<ProductDTO>> Handle(GetAllProductsQuery request, CancellationToken cancellationToken)
     {
         var products = await _productRepository.GetAllAsync();
-        var categories = await _categoryRepository.GetAllAsync();
 
-        return products.Join(categories,
-                p => p.CategoryId,
-                c => c.Id,
-                (p, c) => new ProductDTO
-                {
-                    Id = p.Id,
-                    Name = p.Name,
-                    CategoryName = c.Name,
-                    Description = p.Description,
-                    Price = p.Price,
-                    ImageUrl = p.ImageUrl,
-                    Inventory = p.Inventory,
-                    CategoryId = p.CategoryId,
-                }).ToList();
+        var productDTOs = from p in products
+                          let category = _categoryRepository.GetByIdAsync(p.CategoryId)
+                          select new ProductDTO
+                          {
+                              Id = p.Id,
+                              Name = p.Name,
+                              CategoryName = category.Result.Name,
+                              Description = p.Description,
+                              Price = p.Price,
+                              ImageUrl = p.ImageUrl,
+                              Inventory = p.Inventory,
+                              CategoryId = p.CategoryId,
+                          };
+
+        return productDTOs.ToList();
     }
 }
 

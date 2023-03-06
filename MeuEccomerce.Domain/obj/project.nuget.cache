@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PaiwITQfZiCW+XALzpOc+bwDgWWSG0Zpz/H0orgeLeKPnJe3dbZPHjWeVk8salZ8e5gx8Kqxddnj680ItAHjlg==",
+  "dgSpecHash": "QQkT7muOTtLIDi5bXopfmIPNxBgp8GoYybjEefv6rfd3+Jdgpk+bAbkCz6XE0L7w3uBLlOBHaxMsWKiEdFoyhw==",
   "success": true,
   "projectFilePath": "C:\\dev\\local\\MeuEccomerce\\MeuEccomerce.Domain\\MeuEccomerce.Domain.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\cezar.bezerra\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.13\\microsoft.windowsdesktop.app.ref.6.0.13.nupkg.sha512",
-    "C:\\Users\\cezar.bezerra\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.13\\microsoft.netcore.app.ref.6.0.13.nupkg.sha512",
-    "C:\\Users\\cezar.bezerra\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.13\\microsoft.aspnetcore.app.ref.6.0.13.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }
