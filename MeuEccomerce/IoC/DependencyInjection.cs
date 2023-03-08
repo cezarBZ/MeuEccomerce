@@ -1,11 +1,15 @@
-﻿using FluentValidation;
+﻿using Autofac.Core;
+using FluentValidation;
 using MediatR;
 using MeuEccomerce.API.Application.Commands.Category;
 using MeuEccomerce.API.Application.Commands.Product;
 using MeuEccomerce.API.Application.Mappings;
+using MeuEccomerce.API.Application.Services;
 using MeuEccomerce.API.Validators;
 using MeuEccomerce.Domain.AggregatesModel.CategoryAggregate;
+using MeuEccomerce.Domain.AggregatesModel.OrderAggregate;
 using MeuEccomerce.Domain.AggregatesModel.ProductAggregate;
+using MeuEccomerce.Domain.AggregatesModel.ShoppingCartAggregate;
 using MeuEccomerce.Domain.Core.Data;
 using MeuEccomerce.Infrastructure.Data;
 using MeuEccomerce.Infrastructure.Repositories;
@@ -32,12 +36,15 @@ public static class DependencyInjection
         services.AddScoped(typeof(IRepository<,>), typeof(Repository<,>));
         services.AddTransient<ICategoryRepository, CategoryRepository>();
         services.AddTransient<IProductRepository, ProductRepository>();
+        services.AddScoped<IShoppingCartItemRepository, ShoppingCartItemsRepository>();
         services.AddScoped<IUnitOfWork, UnitOfWork>();
         services.AddTransient<CategoryValidator>();
         services.AddScoped<IValidator<CreateCategoryCommand>, CategoryValidator>();
         services.AddTransient<ProductValidator>();
+        services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         services.AddAutoMapper(typeof(AutoMapperProfile));
         services.AddScoped<IValidator<AddProductCommand>, ProductValidator>();
+        services.AddScoped(sp => ShoppingCartService.Get(sp));
         services.AddIdentity<IdentityUser, IdentityRole>()
             .AddEntityFrameworkStores<ApplicationDataContext>()
             .AddDefaultTokenProviders();
@@ -54,7 +61,14 @@ public static class DependencyInjection
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Jwt:Key"]))
                 };
             });
-
+        services.AddSession(options =>
+        {
+            options.Cookie.Name = "MySessionCookie";
+            options.IdleTimeout = TimeSpan.FromMinutes(30);
+            options.Cookie.IsEssential = true;
+        });
+        services.AddMemoryCache();
+        services.AddMvc();
         return services;
     }
 }

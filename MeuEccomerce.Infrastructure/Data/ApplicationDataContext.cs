@@ -1,5 +1,6 @@
 ﻿using MeuEccomerce.Domain.AggregatesModel.CategoryAggregate;
 using MeuEccomerce.Domain.AggregatesModel.ProductAggregate;
+using MeuEccomerce.Domain.AggregatesModel.ShoppingCartAggregate;
 using MeuEccomerce.Domain.Core.Data;
 using MeuEccomerce.Infrastructure.EntityConfigurations;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -18,6 +19,7 @@ public class ApplicationDataContext : IdentityDbContext, IUnitOfWork
 
     public DbSet<Category> Categories { get; set; }
     public DbSet<Product> Products { get; set; }
+    public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
@@ -27,6 +29,8 @@ public class ApplicationDataContext : IdentityDbContext, IUnitOfWork
         builder.HasDefaultSchema(DEFAULT_SCHEMA);
         builder.ApplyConfiguration(new CategoryConfiguration());
         builder.ApplyConfiguration(new ProductConfiguration());
+        builder.ApplyConfiguration(new ShoppingCartItemsConfiguration());
+
     }
 
 }
