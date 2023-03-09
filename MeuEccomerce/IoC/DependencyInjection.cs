@@ -37,6 +37,7 @@ public static class DependencyInjection
         services.AddTransient<ICategoryRepository, CategoryRepository>();
         services.AddTransient<IProductRepository, ProductRepository>();
         services.AddScoped<IShoppingCartItemRepository, ShoppingCartItemsRepository>();
+        services.AddScoped<IOrderRepository, OrderRepository>();
         services.AddScoped<IUnitOfWork, UnitOfWork>();
         services.AddTransient<CategoryValidator>();
         services.AddScoped<IValidator<CreateCategoryCommand>, CategoryValidator>();
