@@ -1,5 +1,8 @@
+using Autofac;
+using Autofac.Extensions.DependencyInjection;
 using AutoMapper;
 using MeuEccomerce.API.Application.Mappings;
+using MeuEccomerce.API.Infrastructure.AutoFacModules;
 using MeuEccomerce.API.IoC;
 
 
@@ -21,6 +24,12 @@ builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton(mapper);
+builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
+builder.Host.ConfigureContainer<ContainerBuilder>(_ =>
+{
+    _.RegisterModule(new MediatorModule());
+    _.RegisterModule(new ApplicationModule(builder.Configuration));
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

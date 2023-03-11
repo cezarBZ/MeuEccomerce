@@ -12,12 +12,5 @@ public class MediatorModule : Autofac.Module
     {
         builder.RegisterAssemblyTypes(typeof(IMediator).GetTypeInfo().Assembly)
             .AsImplementedInterfaces();
-
-        builder.RegisterAssemblyTypes(typeof(CreateCategoryCommandHandler).GetTypeInfo().Assembly)
-           .AsClosedTypesOf(typeof(IRequestHandler<,>));
-        builder.RegisterAssemblyTypes(typeof(CreateCategoryCommand).GetTypeInfo().Assembly)
-              .AsClosedTypesOf(typeof(IRequestHandler<,>));
-
-
     }
 }
