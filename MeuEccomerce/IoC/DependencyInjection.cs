@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Serilog;
 using System.Reflection;
 using System.Text;
 
@@ -47,7 +48,7 @@ public static class DependencyInjection
         });
         services.AddMemoryCache();
         services.AddMvc();
-       
+        
         return services;
     }
 }
