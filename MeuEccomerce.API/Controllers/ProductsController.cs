@@ -2,7 +2,6 @@
 using MeuEccomerce.API.Application.Commands.Product;
 using MeuEccomerce.API.Application.Query.Products;
 using MeuEccomerce.API.Validators;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MeuEccomerce.API.Controllers;

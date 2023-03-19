@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
 using MeuEccomerce.Domain.AggregatesModel.ShoppingCartAggregate;
-using MeuEccomerce.Domain.AggregatesModel.ProductAggregate;
 
 namespace MeuEccomerce.Infrastructure.EntityConfigurations
 {

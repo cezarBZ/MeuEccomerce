@@ -1,9 +1,6 @@
-﻿
-
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
 using MeuEccomerce.Domain.AggregatesModel.OrderAggregate;
-using MeuEccomerce.Domain.AggregatesModel.CategoryAggregate;
 
 namespace MeuEccomerce.Infrastructure.EntityConfigurations
 {

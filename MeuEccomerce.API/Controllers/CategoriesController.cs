@@ -2,9 +2,7 @@
 using MeuEccomerce.API.Application.Commands.Category;
 using MeuEccomerce.API.Application.Query.Categories;
 using MeuEccomerce.API.Validators;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace MeuEccomerce.API.Controllers;
 
@@ -44,7 +42,7 @@ public class CategoriesController : ControllerBase
             return BadRequest(validator.Errors);
 
         var cmd = await _mediator.Send(command);
-        return Ok(command);
+        return Ok(cmd);
     }
 
     [HttpPatch]

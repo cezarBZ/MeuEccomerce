@@ -3,7 +3,6 @@ using MeuEccomerce.API.Application.Commands.Orders;
 using MeuEccomerce.API.Application.Query.ShoppingCarts;
 using MeuEccomerce.API.Application.Services;
 using MeuEccomerce.Domain.AggregatesModel.OrderAggregate;
-using MeuEccomerce.Domain.AggregatesModel.ShoppingCartAggregate;
 
 namespace MeuEccomerce.API.Application.CommandHandlers.Orders
 {

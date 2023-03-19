@@ -1,5 +1,4 @@
-﻿using MeuEccomerce.Domain.AggregatesModel.ShoppingCartAggregate;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
 using MeuEccomerce.Domain.AggregatesModel.OrderAggregate;
 using MeuEccomerce.Domain.AggregatesModel.ProductAggregate;

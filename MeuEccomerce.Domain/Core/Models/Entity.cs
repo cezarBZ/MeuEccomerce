@@ -1,6 +1,4 @@
-﻿
-
-namespace MeuEccomerce.Domain.Core.Models;
+﻿namespace MeuEccomerce.Domain.Core.Models;
 
 public abstract class Entity<TKey>
 {

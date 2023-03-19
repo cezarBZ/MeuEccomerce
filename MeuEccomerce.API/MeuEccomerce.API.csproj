@@ -40,4 +40,8 @@
     <ProjectReference Include="..\MeuEccomerce.Infrastructure\MeuEccomerce.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controllers\Responses\" />
+  </ItemGroup>
+
 </Project>

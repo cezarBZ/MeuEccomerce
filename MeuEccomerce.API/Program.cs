@@ -5,7 +5,6 @@ using MeuEccomerce.API.Application.Mappings;
 using MeuEccomerce.API.Infrastructure.AutoFacModules;
 using MeuEccomerce.API.IoC;
 using Serilog;
-using Serilog.Formatting.Compact;
 
 internal class Program
 {

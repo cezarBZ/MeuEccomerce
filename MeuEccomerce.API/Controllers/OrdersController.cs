@@ -1,6 +1,5 @@
 ﻿using MediatR;
 using MeuEccomerce.API.Application.Commands.Orders;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MeuEccomerce.API.Controllers

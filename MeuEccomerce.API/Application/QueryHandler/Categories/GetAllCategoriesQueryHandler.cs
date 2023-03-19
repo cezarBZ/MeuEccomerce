@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using MediatR;
 using MeuEccomerce.API.Application.Models.DTO_s;
-using MeuEccomerce.API.Application.Models.ViewModels;
 using MeuEccomerce.API.Application.Query.Categories;
 using MeuEccomerce.Domain.AggregatesModel.CategoryAggregate;
 

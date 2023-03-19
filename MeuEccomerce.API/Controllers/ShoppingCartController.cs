@@ -4,7 +4,6 @@ using MeuEccomerce.API.Application.Query.ShoppingCarts;
 using MeuEccomerce.API.Application.Services;
 using MeuEccomerce.Domain.AggregatesModel.ShoppingCartAggregate;
 using Microsoft.AspNetCore.Mvc;
-using System.Security.Claims;
 
 namespace MeuEccomerce.API.Controllers
 {

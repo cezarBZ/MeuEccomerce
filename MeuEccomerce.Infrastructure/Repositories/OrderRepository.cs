@@ -1,5 +1,4 @@
-﻿using MeuEccomerce.Domain.AggregatesModel.CategoryAggregate;
-using MeuEccomerce.Domain.AggregatesModel.OrderAggregate;
+﻿using MeuEccomerce.Domain.AggregatesModel.OrderAggregate;
 using MeuEccomerce.Infrastructure.Data;
 
 
