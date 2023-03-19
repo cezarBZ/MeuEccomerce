@@ -43,9 +43,12 @@ namespace MeuEccomerce.API.Application.CommandHandlers.Orders
                     request.OrderSent,
                     request.OrderDelivered
             );
-            
-            
             _orderRepository.Add(order);
+            foreach (var item in items)
+            {
+                await _mediator.Send(new CreateOrderDetailsCommand(order.Id, item.ProductId, item.Quantity, item.Price));
+            }
+            
             await _orderRepository.UnitOfWork.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
             return true;
         }

@@ -1,13 +1,24 @@
 ﻿using MediatR;
 using MeuEccomerce.API.Application.Commands.Orders;
+using MeuEccomerce.Domain.AggregatesModel.OrderAggregate;
 
 namespace MeuEccomerce.API.Application.CommandHandlers.Orders
 {
-    public class CreateORderDetailsCommandHandler : IRequestHandler<CreateORderDetailsCommand, bool>
+    public class CreateOrderDetailsCommandHandler : IRequestHandler<CreateOrderDetailsCommand, bool>
     {
-        public Task<bool> Handle(CreateORderDetailsCommand request, CancellationToken cancellationToken)
+        private readonly IOrderRepository _orderRepository;
+
+        public CreateOrderDetailsCommandHandler(IOrderRepository orderRepository)
         {
-            throw new NotImplementedException();
+            _orderRepository = orderRepository;
+        }
+
+        public Task<bool> Handle(CreateOrderDetailsCommand request, CancellationToken cancellationToken)
+        {
+            var orderDetails = new OrderDetails(request.OrderId, request.ProductId, request.Quantity, request.Price);
+
+            _orderRepository.AddOrderDetails(orderDetails);
+            return Task.FromResult(true);
         }
     }
 }

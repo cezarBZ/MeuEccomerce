@@ -11,6 +11,7 @@ namespace MeuEccomerce.Infrastructure.EntityConfigurations
     {
         public void Configure(EntityTypeBuilder<Order> builder)
         {
+            builder.ToTable("Order", Data.ApplicationDataContext.DEFAULT_SCHEMA);
             builder.Property(p => p.Id)
                 .ValueGeneratedOnAdd();
 

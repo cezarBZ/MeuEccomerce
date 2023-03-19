@@ -10,5 +10,10 @@ namespace MeuEccomerce.Infrastructure.Repositories
         public OrderRepository(ApplicationDataContext context) : base(context)
         {
         }
+        public virtual void AddOrderDetails(OrderDetails orderDetails)
+        {
+            _context.Set<OrderDetails>().Add(orderDetails);
+            _context.SaveChanges();
+        }
     }
 }

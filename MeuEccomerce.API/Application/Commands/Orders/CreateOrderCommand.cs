@@ -4,7 +4,7 @@ namespace MeuEccomerce.API.Application.Commands.Orders
 {
     public class CreateOrderCommand : IRequest<bool>
     {
-        public CreateOrderCommand(string firstName, string lastName, string address1, string address2, string zipCode, string state, string city, string phoneNumber, string email, decimal totalOrderPrice, int totalOrderItems, DateTime? orderSent, DateTime? orderDelivered)
+        public CreateOrderCommand(string firstName, string lastName, string address1, string address2, string zipCode, string state, string city, string phoneNumber, string email, DateTime? orderSent, DateTime? orderDelivered)
         {
             FirstName = firstName;
             LastName = lastName;
@@ -15,8 +15,6 @@ namespace MeuEccomerce.API.Application.Commands.Orders
             City = city;
             PhoneNumber = phoneNumber;
             Email = email;
-            TotalOrderPrice = totalOrderPrice;
-            TotalOrderItems = totalOrderItems;
             OrderSent = orderSent;
             OrderDelivered = orderDelivered;
         }
@@ -30,8 +28,6 @@ namespace MeuEccomerce.API.Application.Commands.Orders
         public string City { get; set; }
         public string PhoneNumber { get; set; }
         public string Email { get; set; }
-        public decimal TotalOrderPrice { get; set; }
-        public int TotalOrderItems { get; set; }
         public DateTime? OrderSent { get; set; }
         public DateTime? OrderDelivered { get; set; }
     }

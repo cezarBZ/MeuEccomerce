@@ -2,4 +2,9 @@
 
 namespace MeuEccomerce.Domain.AggregatesModel.OrderAggregate;
 
-public interface IOrderRepository : IRepository<Order, int> {}
+public interface IOrderRepository : IRepository<Order, int> 
+{
+    void AddOrderDetails(OrderDetails orderDetails);
+
+}
+

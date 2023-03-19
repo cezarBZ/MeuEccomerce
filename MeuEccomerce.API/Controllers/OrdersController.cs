@@ -18,7 +18,7 @@ namespace MeuEccomerce.API.Controllers
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] CreateOrderCommand command)
         {
-            var cmd = _mediator.Send(command);
+            var cmd = await _mediator.Send(command);
             return Ok(cmd);
         }
     }
