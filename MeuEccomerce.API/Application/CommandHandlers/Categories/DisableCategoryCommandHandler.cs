@@ -22,8 +22,18 @@ namespace MeuEccomerce.API.Application.CommandHandlers.Categories
             category.Disable();
 
             _categoryRepository.Update(category);
-            await _categoryRepository.UnitOfWork.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
-            return true;
+            try
+            {
+                await _categoryRepository.UnitOfWork.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
+                return true;
+
+            }
+            catch (Exception ex)
+            {
+                await Console.Out.WriteLineAsync($"An error ocurred: {ex.Message}");
+                throw new Exception();
+
+            }
         }
     }
 }

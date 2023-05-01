@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
 using MeuEccomerce.Domain.AggregatesModel.OrderAggregate;
+using MeuEccomerce.Domain.AggregatesModel.UserAggregate;
 
 namespace MeuEccomerce.Infrastructure.EntityConfigurations
 {
@@ -12,42 +13,18 @@ namespace MeuEccomerce.Infrastructure.EntityConfigurations
             builder.Property(p => p.Id)
                 .ValueGeneratedOnAdd();
 
-            builder.Property(p => p.FirstName)
-                .IsRequired()
-                .HasMaxLength(50);
+            builder
+              .Property<int>("_statusId")
+              .UsePropertyAccessMode(PropertyAccessMode.Field)
+              .HasColumnName("StatusId")
+              .IsRequired();
 
-            builder.Property(p => p.LastName)
-                .IsRequired()
-                .HasMaxLength(50);
-
-            builder.Property(p => p.Address1)
-                .IsRequired()
-                .HasMaxLength(100)
-                .HasColumnName("Endereco");
-
-            builder.Property(p => p.Address2)
-                .HasMaxLength(100);
-
-            builder.Property(p => p.ZipCode)
-                .IsRequired()
-                .HasMaxLength(10);
-
-            builder.Property(p => p.State)
-                .HasMaxLength(10);
-
-            builder.Property(p => p.City)
-                .HasMaxLength(50);
-
-            builder.Property(p => p.PhoneNumber)
-                .IsRequired()
-                .HasMaxLength(25)
-                .HasColumnType("varchar(25)");
-
-            builder.Property(p => p.Email)
-                .IsRequired()
-                .HasMaxLength(50)
-                .HasColumnType("varchar(50)")
-                .HasAnnotation("RegularExpression", @"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$");
+            builder.HasOne<User>()
+           .WithMany()
+           .IsRequired()
+           .HasForeignKey(_ => _.CustomerId)
+           .OnDelete(DeleteBehavior.ClientSetNull)
+           .HasConstraintName("FK_User_Order");
 
             builder.Property(p => p.TotalOrderPrice)
                 .HasColumnType("decimal(18,2)");

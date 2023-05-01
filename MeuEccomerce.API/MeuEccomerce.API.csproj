@@ -4,6 +4,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>disable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>8f2d4938-29be-4b20-94fe-24cc6020cd76</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -26,6 +27,8 @@
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.4" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="RabbitMQ.Client" Version="6.5.0" />
     <PackageReference Include="Serilog" Version="3.0.0-dev-01921" />
     <PackageReference Include="Serilog.AspNetCore" Version="6.1.1-dev-00295" />
     <PackageReference Include="Serilog.Enrichers.Environment" Version="2.3.0-dev-00792" />
@@ -41,6 +44,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Controllers\Requests\" />
     <Folder Include="Controllers\Responses\" />
   </ItemGroup>
 
