@@ -1,10 +1,13 @@
 ﻿using MediatR;
 using MeuEccomerce.API.Application.Mappings;
 using MeuEccomerce.API.Application.Services;
+using MeuEccomerce.API.Messaging;
+using MeuEccomerce.Domain.AggregatesModel.UserAggregate;
 using MeuEccomerce.Infrastructure.Data;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System.Reflection;
 using System.Text;
@@ -16,14 +19,13 @@ public static class DependencyInjection
     public static IServiceCollection AddInfrastructure(this IServiceCollection services,
            IConfiguration configuration)
     {
-
         services.AddDbContext<ApplicationDataContext>(options =>
            options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"
             ), b => b.MigrationsAssembly(typeof(ApplicationDataContext).Assembly.FullName)));
         services.AddMediatR(Assembly.GetExecutingAssembly());
         services.AddScoped(sp => ShoppingCartService.Get(sp));
         services.AddAutoMapper(typeof(AutoMapperProfile));
-        services.AddIdentity<IdentityUser, IdentityRole>()
+        services.AddIdentity<User, IdentityRole>()
            .AddEntityFrameworkStores<ApplicationDataContext>()
            .AddDefaultTokenProviders();
         services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -47,7 +49,13 @@ public static class DependencyInjection
         });
         services.AddMemoryCache();
         services.AddMvc();
-        
+        services.AddMessageBus();
+        return services;
+    }
+
+    private static IServiceCollection AddMessageBus(this IServiceCollection services)
+    {
+        services.AddScoped<IMessageBusService, RabbitMQService>();
         return services;
     }
 }
