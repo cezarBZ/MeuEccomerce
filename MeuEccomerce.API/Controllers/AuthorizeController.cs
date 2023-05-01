@@ -1,4 +1,6 @@
-﻿using MeuEccomerce.API.Application.Models.DTO_s;
+﻿using MeuEccomerce.API.Application.Mappings;
+using MeuEccomerce.API.Application.Models.DTO_s;
+using MeuEccomerce.Domain.AggregatesModel.UserAggregate;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
@@ -12,11 +14,12 @@ namespace MeuEccomerce.API.Controllers
     [ApiController]
     public class AuthorizeController : Controller
     {
-        private readonly UserManager<IdentityUser> _userManager;
-        private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly UserManager<User> _userManager;
+        private readonly SignInManager<User> _signInManager;
         private readonly IConfiguration _configuration;
+        private readonly IHttpContextAccessor _httpContextAccessor;
 
-        public AuthorizeController(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager, IConfiguration configuration)
+        public AuthorizeController(UserManager<User> userManager, SignInManager<User> signInManager, IConfiguration configuration)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -27,11 +30,21 @@ namespace MeuEccomerce.API.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] UserDTO model)
         {
-            var user = new IdentityUser { UserName = model.UserName, Email = model.Email };
+            if (model.Password != model.ConfirmPassword)
+            {
+                throw new Exception("Password does not match");
+            }
+            var user = new User { UserName = model.UserName, FullName = model.FullName ,Email = model.Email,PhoneNumber = model.PhoneNumber, AccountCreationDate = DateTime.Now, LastLoginDate = DateTime.Now};
             var result = await _userManager.CreateAsync(user, model.Password);
-
+            
+            
             if (result.Succeeded)
             {
+                var address = new UserAddress(Guid.Parse(user.Id), model.Address.StreetName, model.Address.City, model.Address.PostalCode, model.Address.Country);
+
+                user.Address = address;
+                await _userManager.UpdateAsync(user); 
+
                 await _signInManager.SignInAsync(user, isPersistent: false);
                 return Ok(GenerateToken(model));
             }

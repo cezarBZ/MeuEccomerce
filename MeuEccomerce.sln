@@ -9,6 +9,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeuEccomerce.Infrastructure
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeuEccomerce.API", "MeuEccomerce.API\MeuEccomerce.API.csproj", "{278424DF-22F5-4029-8309-2F0BE9D8565A}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Notifications", "Notifications\Notifications.csproj", "{5DDFBCC5-2C9D-4A5B-8BB8-6CBAE572A364}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeuEccomerce.Tests", "MeuEccomerce.Tests\MeuEccomerce.Tests.csproj", "{0FFF75BA-FC21-4655-88CE-9ACFAD151AC2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{278424DF-22F5-4029-8309-2F0BE9D8565A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{278424DF-22F5-4029-8309-2F0BE9D8565A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{278424DF-22F5-4029-8309-2F0BE9D8565A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DDFBCC5-2C9D-4A5B-8BB8-6CBAE572A364}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DDFBCC5-2C9D-4A5B-8BB8-6CBAE572A364}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DDFBCC5-2C9D-4A5B-8BB8-6CBAE572A364}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DDFBCC5-2C9D-4A5B-8BB8-6CBAE572A364}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FFF75BA-FC21-4655-88CE-9ACFAD151AC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FFF75BA-FC21-4655-88CE-9ACFAD151AC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FFF75BA-FC21-4655-88CE-9ACFAD151AC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FFF75BA-FC21-4655-88CE-9ACFAD151AC2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

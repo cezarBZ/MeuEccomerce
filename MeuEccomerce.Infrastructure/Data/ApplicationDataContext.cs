@@ -2,6 +2,7 @@
 using MeuEccomerce.Domain.AggregatesModel.OrderAggregate;
 using MeuEccomerce.Domain.AggregatesModel.ProductAggregate;
 using MeuEccomerce.Domain.AggregatesModel.ShoppingCartAggregate;
+using MeuEccomerce.Domain.AggregatesModel.UserAggregate;
 using MeuEccomerce.Domain.Core.Data;
 using MeuEccomerce.Infrastructure.EntityConfigurations;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -10,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Design;
 
 namespace MeuEccomerce.Infrastructure.Data;
 
-public class ApplicationDataContext : IdentityDbContext, IUnitOfWork
+public class ApplicationDataContext : IdentityDbContext<User>, IUnitOfWork
 {
     public const string DEFAULT_SCHEMA = "MYE";
     public ApplicationDataContext(DbContextOptions<ApplicationDataContext> options) : base(options)
