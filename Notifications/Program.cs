@@ -11,7 +11,7 @@ var configuration = builder.Configuration;
 builder.Services.AddScoped<INotificationService, EmailService>();
 builder.Services.AddSendGrid(options =>
 {
-    options.ApiKey = "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";
+    options.ApiKey = "";
 });
 
 builder.Services.AddHostedService<OrderStatusChangedSubscriber>();
